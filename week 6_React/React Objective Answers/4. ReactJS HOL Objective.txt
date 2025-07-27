@@ -1,0 +1,58 @@
+1. Need and Benefits of Component Lifecycle
+Need:
+The component lifecycle helps manage how a React component behaves from the moment it is created, updated, and finally removed from the DOM. It allows you to control what happens at each phase (mounting, updating, unmounting).
+
+Benefits:
+
+Control over component behavior at different stages
+
+Perform tasks like data fetching, DOM updates, or cleanup
+
+Optimize performance (e.g., avoid unnecessary re-renders)
+
+React to prop/state changes effectively
+
+Clean up resources to prevent memory leaks (e.g., clearing timers)
+
+2. Various Lifecycle Hook Methods
+Lifecycle methods are available only in class components, but function components achieve similar behavior using React Hooks like useEffect.
+
+Main Lifecycle Methods (Class Components):
+
+Mounting (Component is created and inserted into DOM):
+
+constructor()
+
+static getDerivedStateFromProps()
+
+render()
+
+componentDidMount()
+
+Updating (Component is re-rendered due to props/state change):
+
+static getDerivedStateFromProps()
+
+shouldComponentUpdate()
+
+render()
+
+getSnapshotBeforeUpdate()
+
+componentDidUpdate()
+
+Unmounting (Component is removed):
+
+componentWillUnmount()
+
+3. Sequence of Steps in Rendering a Component
+When a component is rendered (in class-based components), the following sequence occurs:
+
+constructor() – Initializes state and binds methods
+
+getDerivedStateFromProps() – Syncs state with props (if needed)
+
+render() – Returns JSX to display UI
+
+componentDidMount() – Runs after the component is mounted; good for API calls or DOM setup
+

@@ -1,0 +1,73 @@
+1. SPA (Single-Page Application):
+A SPA loads a single HTML page and updates content dynamically as the user interacts with the app. Instead of reloading the whole page, only parts of the content change.
+
+Benefits:
+
+ Faster navigation after initial load
+
+ Smooth and app-like experience
+
+ Reduced server requests
+
+ Reusable components improve efficiency
+
+ 2. React:
+React is a JavaScript library developed by Facebook for building user interfaces, especially for single-page applications.
+
+How It Works:
+
+React uses components – reusable building blocks of UI.
+
+It uses a virtual DOM to detect changes and update only the modified parts of the real DOM, improving performance.
+
+ 3. Difference Between SPA and MPA:
+A Single-Page Application (SPA) loads a single HTML page and updates content dynamically without refreshing the entire page. In contrast, a Multi-Page Application (MPA) reloads a new HTML page from the server every time the user navigates.
+
+SPAs are generally faster and smoother because only the necessary data is fetched and the page is updated without full reloads. MPAs are slower as each action triggers a full page refresh.
+
+When it comes to SEO, MPAs perform better by default since each page has its own URL and can be indexed easily. SPAs require additional setups like server-side rendering to be SEO-friendly.
+
+In terms of user experience, SPAs feel more like a desktop or mobile app, offering seamless transitions. MPAs provide a more traditional website experience, with distinct pages and visible page loads.
+
+ 4. Pros and Cons of SPA:
+Pros:
+
+ Fast and responsive UI
+
+ Reduced bandwidth usage
+
+ Better user experience
+
+Cons:
+
+ SEO challenges
+
+ Harder to secure client-side code
+
+ More complex navigation handling
+
+ 5. About React:
+React is component-based, allowing developers to build complex interfaces using small, reusable pieces. It works well with other tools and frameworks, making it flexible.
+
+Built on JavaScript + JSX
+
+Can be used for web and mobile (React Native)
+
+Supports state management and routing with tools like Redux and React Router
+
+ 6. Virtual DOM:
+The virtual DOM is an in-memory copy of the real DOM. React compares changes between the old and new virtual DOM (diffing), and updates only the changed parts in the real DOM (reconciliation). This makes updates faster and more efficient.
+
+ 7. Features of React:
+ JSX: Write HTML-like code in JavaScript
+
+ Components: Reusable UI parts
+
+ Virtual DOM: Efficient rendering
+
+ One-way data binding: Easier to manage flow of data
+
+ Hooks: Manage state and side effects in functional components
+
+ React Native: Build mobile apps with React
+

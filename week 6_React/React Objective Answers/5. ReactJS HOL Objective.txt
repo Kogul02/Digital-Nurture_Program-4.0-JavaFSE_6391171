@@ -1,0 +1,26 @@
+ 1. Need for Styling React Components:
+Makes UI visually appealing and consistent
+
+Helps in separating layout from logic
+
+Ensures components are reusable and clean
+
+Prevents style conflicts in large apps
+
+2. CSS Modules:
+Styles scoped to the component (no global conflicts)
+
+File uses .module.css extension
+
+Import as an object and apply class like:
+
+jsx
+className={styles.className}
+ Inline Styles:
+Written directly in JSX using a style prop
+
+Uses JavaScript object with camelCase keys
+
+jsx
+
+style={{ backgroundColor: 'blue' }}
