@@ -1,0 +1,119 @@
+Features of ES6
+
+Some key features introduced in ES6 include:
+let and const for block-scoped variable declarations
+
+Arrow functions (=>)
+
+Classes and Inheritance
+
+Template literals (backticks `` for multi-line strings and interpolation)
+Default, rest, and spread parameters
+Destructuring assignment (arrays and objects)
+
+JavaScript let
+
+let allows you to declare block-scoped variables.
+Unlike var, let doesn’t allow re-declaration within the same scope.
+Hoisted but not initialized (Temporal Dead Zone).
+
+let name = "John";
+{
+  let name = "Doe"; 
+  console.log(name); 
+}
+console.log(name); 
+
+var:
+
+Function-scoped: Variables declared with var are accessible throughout the entire function.
+Redeclaration allowed: You can redeclare the same variable within the same scope without errors.
+Hoisted: var variables are hoisted and initialized as undefined, so accessing them before declaration gives undefined.
+Introduced in ES1: var has been part of JavaScript from the very beginning.
+
+let:
+
+Block-scoped: Variables declared with let are only accessible within the block where they are defined.
+Redeclaration not allowed: You cannot redeclare a variable with let in the same scope—it causes a syntax error.
+Hoisted but not initialized: let variables are also hoisted, but accessing them before declaration leads to a ReferenceError because of the temporal dead zone.
+Introduced in ES6: let was added in 2015 (ES6), as a modern, safer alternative for variable declaration.
+
+
+JavaScript const
+
+Declares block-scoped constants.
+Must be initialized at the time of declaration.
+The variable cannot be reassigned, but object properties can be mutated.
+
+ES6 Class Fundamentals
+
+ES6 introduced class syntax as a cleaner way to create objects and handle inheritance.
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    console.log(`Hello, ${this.name}`);
+  }
+}
+
+const p1 = new Person("Sam");
+p1.greet(); // Hello, Sam
+
+
+ES6 Class Inheritance
+
+extends is used to inherit from a parent class.
+
+super() must be called in the constructor of the child class before using this.
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a noise.`);
+  }
+}
+
+class Dog extends Animal {
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+const d = new Dog("Tommy");
+d.speak(); // Tommy barks.
+
+ES6 Arrow Functions
+Shorter syntax for functions.
+
+Do not bind their own this – they inherit this from the surrounding scope (lexical this).
+
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // 5
+
+
+Set() and Map() in ES6
+Set
+
+Collection of unique values.
+Can store any type of value.
+
+const nums = new Set([1, 2, 3, 3]);
+console.log(nums); // Set(3) {1, 2, 3}
+nums.add(4);
+nums.has(2); // true
+
+Map
+
+Collection of key-value pairs.
+Keys can be of any type (unlike objects which only allow strings/symbols).
+
+const map = new Map();
+map.set("name", "Alice");
+map.set(1, "one");
+console.log(map.get("name")); // Alice
+

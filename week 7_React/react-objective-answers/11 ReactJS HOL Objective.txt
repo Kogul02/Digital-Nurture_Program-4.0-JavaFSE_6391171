@@ -1,0 +1,36 @@
+Explain React Events
+
+In React, events are how you handle user interactions like clicks, key presses, form submissions, etc.
+React wraps the browser's native events with its own event system called Synthetic Events for better performance and cross-browser compatibility.
+
+React events are similar to DOM events but follow a different syntax and use camelCase.
+
+Explain About Event Handlers
+
+Event handlers are functions that are triggered in response to an event. In React, you pass these handler functions as props to elements
+function MyButton() {
+  function handleClick() {
+    alert('Button clicked!');
+  }
+
+  return <button onClick={handleClick}>Click Me</button>;
+}
+In the above example, onClick={handleClick} assigns the event handler to the button. When the button is clicked, handleClick() is executed.
+
+Define Synthetic Event
+
+A SyntheticEvent is a wrapper around the browser’s native event system in React.
+It provides a consistent interface for all browsers and includes all the same properties and methods as the native event.
+
+React uses the SyntheticEvent system to improve performance via event delegation and to normalize events across browsers.
+
+Identify React Event Naming Convention
+
+React uses camelCase for event names, unlike HTML which uses lowercase.
+
+HTML Event	React Event
+onclick		onClick
+onchange	onChange
+onkeydown	onKeyDown
+
+Also, in React, event handlers are passed as functions (not strings like in HTML).
